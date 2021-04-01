@@ -2,18 +2,25 @@
 
 @import './css/reset.css';
 
-*{
-    margin: 0;
-    box-sizing: border-box;
-}
-
 :root {
     --cor-fundo: rgb(32, 33, 36);
     font-size: 10px;
+    --fonte-principal: BlinkMacSystemFont,Segoe UI,Roboto,Oxygen, Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    --tom-de-verde: rgb(79, 250, 123);
+    --tom-de-cinza: rgb(229, 229, 229);
 }
 
 body{
     background-color: var(--cor-fundo);
-    color: white;
+    color: var(--tom-de-cinza);
     font-size: 1.6rem;
+    font-family: var(--fonte-principal);
+}
+
+.d-flex{
+    display: flex;
+}
+
+.d-block{
+    display: block;
 }
