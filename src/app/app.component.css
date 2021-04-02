@@ -20,13 +20,16 @@ header{
     cursor: pointer;
 }
 
-.titulo-da-pagina{
+.titulo-do-header{
     font-size: 2.6rem;
-    font-weight: 600;
-    margin: 0 1.5rem;
-    cursor: pointer;
 }
 
-.titulo-da-pagina:hover{
+.titulo-do-header:hover{
     color: var(--tom-de-verde);
+}
+
+.titulo-do-main{
+    font-size: 2.4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }

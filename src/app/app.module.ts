@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TabelasDeCasosNosEstadosBrasileirosComponent } from './tabelas-de-casos/tabelas-de-casos-nos-estados-brasileiros/tabelas-de-casos-nos-estados-brasileiros.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TabelasDeCasosNosEstadosBrasileirosComponent
   ],
   imports: [
     BrowserModule,
