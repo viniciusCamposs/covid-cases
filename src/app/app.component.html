@@ -12,4 +12,20 @@
     <p class="margin-nas-laterais titulo-do-main titulo">Dados</p>
 </main>
 
-<router-outlet></router-outlet>
+<div class="d-flex">
+  <app-tabela-de-casos-nos-estados-brasileiros style="width: 90rem;"></app-tabela-de-casos-nos-estados-brasileiros>
+
+  <div class="d-block">
+    <div class="d-flex">
+      <app-tabela-de-casos-no-brasil style="width: 50rem;"></app-tabela-de-casos-no-brasil>
+      <app-tabela-de-casos-na-espanha style="width: 50rem;"></app-tabela-de-casos-na-espanha>
+    </div>
+
+    <div class="d-flex">
+      <app-tabela-de-casos-na-italia style="width: 50rem;"></app-tabela-de-casos-na-italia>
+      <app-tabela-de-casos-na-franca style="width: 50rem;"></app-tabela-de-casos-na-franca>
+    </div>
+  </div>
+</div>
+
+

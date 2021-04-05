@@ -1,0 +1,18 @@
+<div class="card mb-3 f1 margin-nas-laterais tamanho-das-tabelas-dos-paises">
+  <div class="card-header titulo titulo-das-tabelas mb-3">
+    Status na Espanha
+  </div>
+
+  <div class="card-body">
+    <p class="mb-2">✅ <strong> {{ dadosEspanha.confirmed }} </strong> Confirmados</p>
+    <p class="mb-2">🚨 <strong> {{ dadosEspanha.cases }} </strong> Ativos</p>
+    <p class="mb-2">♻️ <strong> {{ dadosEspanha.recovered }} </strong> Recuperados</p>
+    <p class="mb-2">💀 <strong> {{ dadosEspanha.deaths }} </strong> Mortes</p>
+
+    <hr/>
+
+    <p class="mb-2">🕐 <strong>Atualizado</strong> {{dadosEspanha.updated_at | date: 'dd/MM/yyyy - HH:mm'}}</p>
+    <p class="mb-2">📊 <strong>Fonte</strong> WHO</p>
+
+  </div>
+</div>
