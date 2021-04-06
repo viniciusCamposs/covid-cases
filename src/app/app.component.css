@@ -1,36 +1,34 @@
-header{
+header {
     align-items: center;
     justify-content: space-between;
     height: 6.4rem;
 }
 
-.itens-na-esquerda{
+.itens-na-esquerda {
     align-items: center;
 }
 
-.icone-do-virus{
-    width: 4rem;
-    height: 4rem;
-}
-
-.icone-do-github{
-    width: 2.4rem;
-    height: 2.4rem;
-    margin-right: 1.5rem;
-    cursor: pointer;
-}
-
-.titulo-do-header{
+.titulo-do-header {
     font-size: 2.6rem;
     cursor: pointer;
 }
 
-.titulo-do-header:hover{
+.titulo-do-header:hover {
     color: var(--tom-de-verde);
 }
 
-.titulo-do-main{
+.titulo-do-main {
     font-size: 2.4rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 780px) {
+    main .d-flex {
+        flex-direction: column;
+    }
+
+    .width-50-porcento {
+        width: 100%;
+    }
 }

@@ -1,0 +1,65 @@
+.card {
+    border-radius: 1rem;
+    padding: 1.5rem;
+    background-color: var(--cor-fundo-escuro);
+}
+
+.card:hover {
+    border: 1px solid var(--tom-de-cinza);
+    border-radius: 1rem;
+}
+
+.cor-de-fundo-dos-card {
+  background-color: var(--cor-fundo-escuro);
+}
+
+.card-scroll{
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+  background: var(--tom-de-cinza);
+}
+
+hr {
+  border: none;
+  height: .2rem;
+  color: var(--tom-de-cinza);
+  background-color: var(--tom-de-cinza);
+}
+
+/* TABELAS */
+.titulo-das-tabelas {
+  font-size: 2.4rem;
+}
+
+td {
+  color: var(--tom-de-cinza);
+}
+
+tr {
+  color: var(--tom-de-cinza);
+}
+
+th {
+  color: var(--tom-de-cinza);
+}
+
+.tamanho-da-fonte-nas-tabelas {
+  font-size: smaller;
+}
+
+.tamanho-das-tabelas-dos-paises {
+  height: 40rem;
+}
