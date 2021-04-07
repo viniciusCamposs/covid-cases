@@ -4,15 +4,12 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-tabela-de-casos-na-franca',
   templateUrl: './tabela-de-casos-na-franca.component.html',
-  styleUrls: ['./tabela-de-casos-na-franca.component.css']
+  styleUrls: ['./tabela-de-casos-na-franca.component.css'],
 })
 export class TabelaDeCasosNaFrancaComponent implements OnInit {
-
   public dadosFranca: any = '';
 
-  constructor(
-    private casosService: CasosService
-  ) { }
+  constructor(private casosService: CasosService) {}
 
   ngOnInit(): void {
     this.getDadosDaFranca();
@@ -29,5 +26,4 @@ export class TabelaDeCasosNaFrancaComponent implements OnInit {
       }
     );
   }
-
 }

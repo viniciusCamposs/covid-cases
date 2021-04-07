@@ -1,34 +1,34 @@
 header {
-    align-items: center;
-    justify-content: space-between;
-    height: 6.4rem;
+  align-items: center;
+  justify-content: space-between;
+  height: 6.4rem;
 }
 
 .itens-na-esquerda {
-    align-items: center;
+  align-items: center;
 }
 
 .titulo-do-header {
-    font-size: 2.6rem;
-    cursor: pointer;
+  font-size: 2.6rem;
+  cursor: pointer;
 }
 
 .titulo-do-header:hover {
-    color: var(--tom-de-verde);
+  color: var(--tom-de-verde);
 }
 
 .titulo-do-main {
-    font-size: 2.4rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+  font-size: 2.4rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 @media screen and (max-width: 780px) {
-    main .d-flex {
-        flex-direction: column;
-    }
+  main .d-flex {
+    flex-direction: column;
+  }
 
-    .width-50-porcento {
-        width: 100%;
-    }
+  .width-50-porcento {
+    width: 100%;
+  }
 }

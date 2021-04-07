@@ -1,26 +1,41 @@
 <div class="card mb-3 f1 margin-nas-laterais tamanho-das-tabelas-dos-paises">
-  <div class="card-header titulo titulo-das-tabelas mb-3">
-    Status na França
-  </div>
+  <div class="card-header titulo titulo-das-tabelas mb-3">Status na França</div>
 
   <div class="card-body">
-    <p class="mb-2">✅ <strong> {{ dadosFranca.confirmed }} </strong> Confirmados</p>
-    <p class="mb-2">🚨 <strong> {{ dadosFranca.cases }} </strong> Ativos</p>
-    <p class="mb-2">♻️ <strong> {{ dadosFranca.recovered }} </strong> Recuperados</p>
-    <p class="mb-2">💀 <strong> {{ dadosFranca.deaths }} </strong> Mortes</p>
+    <p class="mb-2">
+      ✅ <strong> {{ dadosFranca.confirmed }} </strong> Confirmados
+    </p>
+    <p class="mb-2">
+      🚨 <strong> {{ dadosFranca.cases }} </strong> Ativos
+    </p>
+    <p class="mb-2">
+      ♻️ <strong> {{ dadosFranca.recovered }} </strong> Recuperados
+    </p>
+    <p class="mb-2">
+      💀 <strong> {{ dadosFranca.deaths }} </strong> Mortes
+    </p>
 
-    <hr/>
+    <hr />
 
-    <p class="mb-2">🕐 <strong>Atualizado</strong> {{dadosFranca.updated_at | date: 'dd/MM/yyyy - HH:mm'}}</p>
+    <p class="mb-2">
+      🕐 <strong>Atualizado</strong>
+      {{ dadosFranca.updated_at | date: "dd/MM/yyyy - HH:mm" }}
+    </p>
     <p class="mb-2">📊 <strong>Fonte</strong> WHO</p>
 
     <p class="mb-4"><strong>Compartilhar</strong></p>
     <div class="d-flex h-center">
-      <img src="../../../assets/whatsapp.svg" alt="Ícone do Whatsapp" class="icone-medio cursor-pointer mr-2">
-      <img src="../../../assets/facebook.svg" alt="Ícone do Facebook" class="icone-medio cursor-pointer mr-2">
-      <img src="../../../assets/twitter.svg" alt="Ícone do Twitter" class="icone-medio cursor-pointer">
+      <share-buttons
+        [theme]="'circles-dark'"
+        [include]="['facebook', 'twitter', 'whatsapp']"
+        [show]="3"
+        [size]="-3"
+        [url]="'https://twitter.com/'"
+        [title]="'Titulo'"
+        [description]="'Um titulo'"
+        [autoSetMeta]="false"
+      >
+      </share-buttons>
     </div>
-
   </div>
 </div>
-

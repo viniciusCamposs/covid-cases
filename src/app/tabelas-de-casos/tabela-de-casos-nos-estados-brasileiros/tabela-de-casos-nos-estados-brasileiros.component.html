@@ -1,33 +1,45 @@
-<div class="card mb-3 f1 margin-nas-laterais tamanho-da-tabela-dos-estados-brasileiros">
-    <div class="card-header titulo titulo-das-tabelas">
-      Status no Brasil por UF
-    </div>
+<div
+  class="card mb-3 f1 margin-nas-laterais tamanho-da-tabela-dos-estados-brasileiros"
+>
+  <div class="card-header titulo titulo-das-tabelas">
+    Status no Brasil por UF
+  </div>
 
-    <div class="card-body card-scroll">
-      <table class="table tamanho-da-fonte-nas-tabelas">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">📍 Estado</th>
-            <th scope="col">🚨 Confirmados</th>
-            <th scope="col">💀 Mortes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let caso of casos; let i = index">
-            <th scope="row">{{ i + 1 }}</th>
-            <td>{{ caso.uf }}</td>
-            <td>{{ caso.cases }}</td>
-            <td>{{ caso.deaths }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <div class="card-body card-scroll">
+    <table class="table tamanho-da-fonte-nas-tabelas">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">📍 Estado</th>
+          <th scope="col">🚨 Confirmados</th>
+          <th scope="col">💀 Mortes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let caso of casos; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ caso.uf }}</td>
+          <td>{{ caso.cases }}</td>
+          <td>{{ caso.deaths }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-    <div class="card-footer">
-      <p class="mb-4"><strong>Compartilhar</strong></p>
-      <div class="d-flex h-center">
-        <img src="../../../assets/whatsapp.svg" alt="Ícone do Whatsapp" class="icone-medio cursor-pointer mr-2">
-      </div>
+  <div class="card-footer">
+    <p class="mb-4"><strong>Compartilhar</strong></p>
+    <div class="d-flex h-center">
+      <share-buttons
+        [theme]="'circles-dark'"
+        [include]="['whatsapp', 'facebook', 'twitter']"
+        [show]="1"
+        [size]="-3"
+        [url]="'https://twitter.com/'"
+        [title]="'Titulo'"
+        [description]="'Um titulo'"
+        [autoSetMeta]="false"
+      >
+      </share-buttons>
     </div>
   </div>
+</div>

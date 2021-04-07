@@ -4,16 +4,13 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-tabela-de-casos-nos-estados-brasileiros',
   templateUrl: './tabela-de-casos-nos-estados-brasileiros.component.html',
-  styleUrls: ['./tabela-de-casos-nos-estados-brasileiros.component.css']
+  styleUrls: ['./tabela-de-casos-nos-estados-brasileiros.component.css'],
 })
 export class TabelaDeCasosNosEstadosBrasileirosComponent implements OnInit {
-
   public casos: any;
   public bandeiras: any;
 
-  constructor(
-    private casosService: CasosService
-  ) { }
+  constructor(private casosService: CasosService) {}
 
   ngOnInit(): void {
     this.getDadosPorEstadosBrasileiros();
@@ -42,5 +39,4 @@ export class TabelaDeCasosNosEstadosBrasileirosComponent implements OnInit {
       }
     );
   }
-
 }
