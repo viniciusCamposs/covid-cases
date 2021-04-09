@@ -34,9 +34,9 @@
         [include]="['whatsapp', 'facebook', 'twitter']"
         [show]="1"
         [size]="-3"
-        [url]="'https://twitter.com/'"
+        [url]="'https://github.com/viniciusCamposs/covid-cases'"
         [title]="'Titulo'"
-        [description]="'Um titulo'"
+        description="{{ casos | json}}"
         [autoSetMeta]="false"
       >
       </share-buttons>

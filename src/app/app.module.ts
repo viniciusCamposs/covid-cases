@@ -3,6 +3,13 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NzSelectModule } from 'ng-zorro-antd/select';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +19,8 @@ import { TabelaDeCasosNaEspanhaComponent } from './tabelas-de-casos/tabela-de-ca
 import { TabelaDeCasosNaItaliaComponent } from './tabelas-de-casos/tabela-de-casos-na-italia/tabela-de-casos-na-italia.component';
 import { TabelaDeCasosNaFrancaComponent } from './tabelas-de-casos/tabela-de-casos-na-franca/tabela-de-casos-na-franca.component';
 
+registerLocaleData(en);
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,18 +28,21 @@ import { TabelaDeCasosNaFrancaComponent } from './tabelas-de-casos/tabela-de-cas
     TabelaDeCasosNoBrasilComponent,
     TabelaDeCasosNaEspanhaComponent,
     TabelaDeCasosNaItaliaComponent,
-    TabelaDeCasosNaFrancaComponent
+    TabelaDeCasosNaFrancaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ShareButtonsModule.withConfig({
-      debug: true
+      debug: true,
     }),
-    ShareIconsModule
+    ShareIconsModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    NzSelectModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [{ provide: NZ_I18N, useValue: en_US }],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
