@@ -1,38 +1,94 @@
-<header class="d-flex">
-    <div class="itens-na-esquerda d-flex">
-        <div class="titulo-do-header margin-nas-laterais titulo">Casos de COVID-19 ao redor do mundo</div>
-        <img src="../assets/logo.svg" alt="Logo do COVID-19" class="icone-medio">
+<header class="d-flex margin-nas-laterais">
+  <div class="itens-na-esquerda d-flex">
+    <div class="titulo-do-header margin-nas-laterais titulo">
+      Casos de COVID-19 ao redor do mundo
     </div>
-    <div class="itens-na-direita">
-        <img src="../assets/github.svg" alt="Logo" class="icone-pequeno mr-4">
-    </div>
+    <img src="../assets/logo.svg" alt="Logo do COVID-19" class="icone-medio" />
+  </div>
+  <div class="itens-na-direita">
+    <img src="../assets/github.svg" alt="Logo" class="icone-pequeno" />
+  </div>
 </header>
 
-<main>
-    <p class="margin-nas-laterais titulo-do-main titulo">Dados</p>
+<main class="margin-nas-laterais">
+  <p class="margin-nas-laterais titulo-do-main titulo">Dados</p>
 
-<div class="d-flex f1">
-  <app-tabela-de-casos-nos-estados-brasileiros class="width-50-porcento"></app-tabela-de-casos-nos-estados-brasileiros>
+  <div class="d-flex">
+    <app-tabela-de-casos-nos-estados-brasileiros
+      class="width-50-porcento"
+    ></app-tabela-de-casos-nos-estados-brasileiros>
 
-  <div class="d-block" class="width-50-porcento">
-    <div class="d-flex">
-      <app-tabela-de-casos-no-brasil class="width-50-porcento"></app-tabela-de-casos-no-brasil>
-      <app-tabela-de-casos-na-espanha  class="width-50-porcento"></app-tabela-de-casos-na-espanha>
-    </div>
+    <div class="d-block" class="width-50-porcento">
+      <div class="d-flex">
+        <app-tabela-de-casos-no-brasil
+          class="width-50-porcento"
+        ></app-tabela-de-casos-no-brasil>
+        <app-tabela-de-casos-na-espanha
+          class="width-50-porcento"
+        ></app-tabela-de-casos-na-espanha>
+      </div>
 
-    <div class="d-flex">
-      <app-tabela-de-casos-na-italia  class="width-50-porcento"></app-tabela-de-casos-na-italia>
-      <app-tabela-de-casos-na-franca  class="width-50-porcento"></app-tabela-de-casos-na-franca>
+      <div class="d-flex">
+        <app-tabela-de-casos-na-italia
+          class="width-50-porcento"
+        ></app-tabela-de-casos-na-italia>
+        <app-tabela-de-casos-na-franca
+          class="width-50-porcento"
+        ></app-tabela-de-casos-na-franca>
+      </div>
     </div>
   </div>
-</div>
 
+  <div class="d-flex">
+    <div class="d-block width-50-porcento margin-nas-laterais">
+      <div class="d-flex h-center">
+        <div class="d-block" style="width: 23.4375vw">
+          <p class="titulo titulo-do-main text-center">
+            Pesquise por um estado
+          </p>
+          <nz-select
+            nzShowSearch
+            nzAllowClear
+            nzPlaceHolder="Pesquise por um estado"
+            class="mb-4"
+            [(ngModel)]="estadoSelecionado"
+            (ngModelChange)="getEstadoSelecionado($event)"
+          >
+            <nz-option
+              *ngFor="let estado of estados | async"
+              nzLabel="{{ estado.Nome }}"
+              nzValue="{{ estado.Sigla }}"
+            ></nz-option>
+          </nz-select>
+          <app-tabela-com-pesquisa-de-casos-por-pais
+            [estadoSelecionado]="estadoSelecionado"
+          ></app-tabela-com-pesquisa-de-casos-por-pais>
+        </div>
+      </div>
+    </div>
+    <div class="d-block width-50-porcento margin-nas-laterais">
+      <div class="d-flex h-center">
+        <div class="d-block" style="width: 23.4375vw">
+          <p class="titulo titulo-do-main text-center">Pesquise por um país</p>
+          <nz-select
+            nzShowSearch
+            nzAllowClear
+            nzPlaceHolder="Pesquise por um país"
+            class="mb-4"
+            [(ngModel)]="estadoSelecionado"
+            (ngModelChange)="getEstadoSelecionado($event)"
+          >
+            <nz-option
+              *ngFor="let estado of estados | async"
+              nzLabel="{{ estado.Nome }}"
+              nzValue="{{ estado.Sigla }}"
+            ></nz-option>
+          </nz-select>
+          <app-tabela-com-pesquisa-de-casos-por-pais
+            [estadoSelecionado]="estadoSelecionado"
+          ></app-tabela-com-pesquisa-de-casos-por-pais>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
-
-<div style="margin-left: 200px;">
-  <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Select a person">
-    <nz-option nzLabel="Jack" nzValue="jack"></nz-option>
-    <nz-option nzLabel="Lucy" nzValue="lucy"></nz-option>
-    <nz-option nzLabel="Tom" nzValue="tom"></nz-option>
-  </nz-select>
-</div>

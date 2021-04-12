@@ -23,7 +23,11 @@ header {
   margin-bottom: 2rem;
 }
 
-@media screen and (max-width: 780px) {
+nz-select {
+  width: 100%;
+}
+
+@media screen and (max-width: 905px) {
   main .d-flex {
     flex-direction: column;
   }
@@ -31,4 +35,7 @@ header {
   .width-50-porcento {
     width: 100%;
   }
+
 }
+
+

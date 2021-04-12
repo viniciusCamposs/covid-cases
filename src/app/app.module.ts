@@ -18,6 +18,7 @@ import { TabelaDeCasosNoBrasilComponent } from './tabelas-de-casos/tabela-de-cas
 import { TabelaDeCasosNaEspanhaComponent } from './tabelas-de-casos/tabela-de-casos-na-espanha/tabela-de-casos-na-espanha.component';
 import { TabelaDeCasosNaItaliaComponent } from './tabelas-de-casos/tabela-de-casos-na-italia/tabela-de-casos-na-italia.component';
 import { TabelaDeCasosNaFrancaComponent } from './tabelas-de-casos/tabela-de-casos-na-franca/tabela-de-casos-na-franca.component';
+import { TabelaComPesquisaDeCasosPorPaisComponent } from './tabelas-de-casos/tabela-com-pesquisa-de-casos-por-pais/tabela-com-pesquisa-de-casos-por-pais.component';
 
 registerLocaleData(en);
 
@@ -29,6 +30,7 @@ registerLocaleData(en);
     TabelaDeCasosNaEspanhaComponent,
     TabelaDeCasosNaItaliaComponent,
     TabelaDeCasosNaFrancaComponent,
+    TabelaComPesquisaDeCasosPorPaisComponent,
   ],
   imports: [
     BrowserModule,
