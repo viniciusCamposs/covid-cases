@@ -6,7 +6,9 @@
     <img src="../assets/logo.svg" alt="Logo do COVID-19" class="icone-medio" />
   </div>
   <div class="itens-na-direita">
-    <img src="../assets/github.svg" alt="Logo" class="icone-pequeno" />
+    <a href="https://github.com/viniciusCamposs/covid-cases" target="_blank" rel="noopener noreferrer">
+      <img src="../assets/github.svg" alt="Logo" class="icone-pequeno" />
+    </a>
   </div>
 </header>
 
@@ -60,9 +62,9 @@
               nzValue="{{ estado.Sigla }}"
             ></nz-option>
           </nz-select>
-          <app-tabela-com-pesquisa-de-casos-por-pais
-            [estadoSelecionado]="estadoSelecionado"
-          ></app-tabela-com-pesquisa-de-casos-por-pais>
+          <app-tabela-de-casos
+            [estado]="estadoSelecionado"
+          ></app-tabela-de-casos>
         </div>
       </div>
     </div>
@@ -75,18 +77,16 @@
             nzAllowClear
             nzPlaceHolder="Pesquise por um país"
             class="mb-4"
-            [(ngModel)]="estadoSelecionado"
-            (ngModelChange)="getEstadoSelecionado($event)"
+            [(ngModel)]="paisSelecionado"
+            (ngModelChange)="getPaisSelecionado($event)"
           >
             <nz-option
-              *ngFor="let estado of estados | async"
-              nzLabel="{{ estado.Nome }}"
-              nzValue="{{ estado.Sigla }}"
+              *ngFor="let pais of paises | async"
+              nzLabel="{{ pais.name }}"
+              nzValue="{{ pais.name }}"
             ></nz-option>
           </nz-select>
-          <app-tabela-com-pesquisa-de-casos-por-pais
-            [estadoSelecionado]="estadoSelecionado"
-          ></app-tabela-com-pesquisa-de-casos-por-pais>
+          <app-tabela-de-casos [pais]="paisSelecionado"></app-tabela-de-casos>
         </div>
       </div>
     </div>

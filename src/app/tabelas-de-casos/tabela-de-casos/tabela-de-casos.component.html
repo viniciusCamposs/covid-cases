@@ -1,0 +1,63 @@
+<div class="card mb-3 f1 tamanho-das-tabelas-dos-paises">
+  <div class="card-header titulo titulo-das-tabelas mb-3" *ngIf="estado">
+    {{ estado.state }}
+  </div>
+
+  <div class="card-header titulo titulo-das-tabelas mb-3" *ngIf="pais">
+    {{ pais.country }}
+  </div>
+
+  <div class="card-body">
+    <p class="mb-2" *ngIf="estado">
+      ✅ <strong> {{ estado.cases | number }} </strong> Confirmados
+    </p>
+
+    <p class="mb-2" *ngIf="pais">
+      ✅ <strong> {{ pais.confirmed | number }} </strong> Confirmados
+    </p>
+
+    <p class="mb-2" *ngIf="pais">
+      🚨 <strong> {{ pais.cases | number }} </strong> Ativos
+    </p>
+
+    <p class="mb-2" *ngIf="pais">
+      ♻️ <strong> {{ pais.recovered | number }} </strong> Recuperados
+    </p>
+
+    <p class="mb-2" *ngIf="estado">
+      💀 <strong> {{ estado.deaths | number }} </strong> Mortes
+    </p>
+
+    <p class="mb-2" *ngIf="pais">
+      💀 <strong> {{ pais.deaths | number }} </strong> Mortes
+    </p>
+
+    <hr />
+
+    <p class="mb-2" *ngIf="estado">
+      🕐 <strong>Atualizado</strong>
+      {{ estado.datetime | date: "dd/MM/yyyy - HH:mm" }}
+    </p>
+
+    <p class="mb-2" *ngIf="pais">
+      🕐 <strong>Atualizado</strong>
+      {{ pais.updated_at | date: "dd/MM/yyyy - HH:mm" }}
+    </p>
+    <p class="mb-2">📊 <strong>Fonte</strong> WHO</p>
+
+    <p class="mb-4"><strong>Compartilhar</strong></p>
+    <div class="d-flex h-center">
+      <share-buttons
+        [theme]="'circles-dark'"
+        [include]="['facebook', 'twitter', 'whatsapp']"
+        [show]="3"
+        [size]="-3"
+        [url]="'https://twitter.com/'"
+        [title]="'Titulo'"
+        [description]="'Um titulo'"
+        [autoSetMeta]="false"
+      >
+      </share-buttons>
+    </div>
+  </div>
+</div>

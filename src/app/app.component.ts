@@ -12,15 +12,28 @@ export class AppComponent implements OnInit {
   estados: any;
   estadoSelecionado: any;
 
+  paises: any;
+  paisSelecionado: any;
+
   constructor(private casosService: CasosService) {}
 
   ngOnInit(): void {
+    this.inicializarDados();
+  }
+
+  inicializarDados(): void {
     this.getEstados();
+    this.getPaises();
     this.getEstadoSelecionado('SP');
+    this.getPaisSelecionado('brazil');
   }
 
   getEstados(): void {
     this.estados = this.casosService.getNomeDosEstadosBrasileiros();
+  }
+
+  getPaises(): void {
+    this.paises = this.casosService.getNomeDosPaises();
   }
 
   getEstadoSelecionado(estado: any): void {
@@ -28,7 +41,23 @@ export class AppComponent implements OnInit {
     this.casosService.getDadosPorEstadoBrasileiroSelecionado(estado).subscribe(
       (data: any) => {
         this.estadoSelecionado = data;
-        console.log(data);
+      },
+      (error: any) => {
+        console.error(error);
+      }
+    );
+  }
+
+  getPaisSelecionado(pais: any): void {
+    // tslint:disable-next-line: deprecation
+    this.casosService.getDadosPorPaisSelecionado(pais).subscribe(
+      (data: any) => {
+        if (data.data.country) {
+          this.paisSelecionado = data.data;
+        } else {
+          this.paisSelecionado = {};
+          this.paisSelecionado.country = 'Pais não encontrado!';
+        }
       },
       (error: any) => {
         console.error(error);
