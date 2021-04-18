@@ -14,6 +14,8 @@ export class AppComponent implements OnInit {
 
   paises: any;
   paisSelecionado: any;
+  paisesIniciais = ['brazil', 'spain', 'italy', 'france'];
+  pais: Array<any> = [];
 
   constructor(private casosService: CasosService) {}
 
@@ -25,7 +27,11 @@ export class AppComponent implements OnInit {
     this.getEstados();
     this.getPaises();
     this.getEstadoSelecionado('SP');
-    this.getPaisSelecionado('brazil');
+    this.getPaisSelecionado('portugal');
+
+    for (const paisInicial of this.paisesIniciais) {
+      this.getPais(paisInicial);
+    }
   }
 
   getEstados(): void {
@@ -62,6 +68,14 @@ export class AppComponent implements OnInit {
       (error: any) => {
         console.error(error);
       }
+    );
+  }
+
+  getPais(pais: any): any {
+    // tslint:disable-next-line: deprecation
+    this.casosService.getDadosPorPaisSelecionado(pais).subscribe(
+      (data: any) => { this.pais.push(data.data); },
+      (error: any) => { console.error(error); }
     );
   }
 }

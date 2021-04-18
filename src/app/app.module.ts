@@ -14,10 +14,6 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TabelaDeCasosNosEstadosBrasileirosComponent } from './tabelas-de-casos/tabela-de-casos-nos-estados-brasileiros/tabela-de-casos-nos-estados-brasileiros.component';
-import { TabelaDeCasosNoBrasilComponent } from './tabelas-de-casos/tabela-de-casos-no-brasil/tabela-de-casos-no-brasil.component';
-import { TabelaDeCasosNaEspanhaComponent } from './tabelas-de-casos/tabela-de-casos-na-espanha/tabela-de-casos-na-espanha.component';
-import { TabelaDeCasosNaItaliaComponent } from './tabelas-de-casos/tabela-de-casos-na-italia/tabela-de-casos-na-italia.component';
-import { TabelaDeCasosNaFrancaComponent } from './tabelas-de-casos/tabela-de-casos-na-franca/tabela-de-casos-na-franca.component';
 import { TabelaComPesquisaDeCasosPorPaisComponent } from './tabelas-de-casos/tabela-com-pesquisa-de-casos-por-pais/tabela-com-pesquisa-de-casos-por-pais.component';
 import { TabelaDeCasosComponent } from './tabelas-de-casos/tabela-de-casos/tabela-de-casos.component';
 
@@ -27,10 +23,6 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     TabelaDeCasosNosEstadosBrasileirosComponent,
-    TabelaDeCasosNoBrasilComponent,
-    TabelaDeCasosNaEspanhaComponent,
-    TabelaDeCasosNaItaliaComponent,
-    TabelaDeCasosNaFrancaComponent,
     TabelaComPesquisaDeCasosPorPaisComponent,
     TabelaDeCasosComponent,
   ],

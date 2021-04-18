@@ -22,21 +22,13 @@
 
     <div class="d-block" class="width-50-porcento">
       <div class="d-flex">
-        <app-tabela-de-casos-no-brasil
-          class="width-50-porcento"
-        ></app-tabela-de-casos-no-brasil>
-        <app-tabela-de-casos-na-espanha
-          class="width-50-porcento"
-        ></app-tabela-de-casos-na-espanha>
+        <app-tabela-de-casos class="width-50-porcento" [pais]="pais[0]"></app-tabela-de-casos>
+        <app-tabela-de-casos class="width-50-porcento" [pais]="pais[1]"></app-tabela-de-casos>
       </div>
 
       <div class="d-flex">
-        <app-tabela-de-casos-na-italia
-          class="width-50-porcento"
-        ></app-tabela-de-casos-na-italia>
-        <app-tabela-de-casos-na-franca
-          class="width-50-porcento"
-        ></app-tabela-de-casos-na-franca>
+        <app-tabela-de-casos class="width-50-porcento" [pais]="pais[2]"></app-tabela-de-casos>
+        <app-tabela-de-casos class="width-50-porcento" [pais]="pais[3]"></app-tabela-de-casos>
       </div>
     </div>
   </div>
