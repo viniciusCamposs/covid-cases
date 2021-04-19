@@ -29,30 +29,6 @@ export class CasosService {
     );
   }
 
-  getDadosDoBrasil(): Observable<any> {
-    return this.http.get(
-      `https://covid19-brazil-api.now.sh/api/report/v1/brazil`
-    );
-  }
-
-  getDadosDaEspanha(): Observable<any> {
-    return this.http.get(
-      `https://covid19-brazil-api.now.sh/api/report/v1/spain`
-    );
-  }
-
-  getDadosNaItalia(): Observable<any> {
-    return this.http.get(
-      `https://covid19-brazil-api.now.sh/api/report/v1/italy`
-    );
-  }
-
-  getDadosDaFranca(): Observable<any> {
-    return this.http.get(
-      `https://covid19-brazil-api.now.sh/api/report/v1/france`
-    );
-  }
-
   getNomeDosEstadosBrasileiros(): Observable<any> {
     return this.http.get(`../../assets/dados/estados.json`);
   }

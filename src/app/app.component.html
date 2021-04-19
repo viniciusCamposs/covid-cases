@@ -1,42 +1,58 @@
 <header class="d-flex margin-nas-laterais">
   <div class="itens-na-esquerda d-flex">
-    <div class="titulo-do-header margin-nas-laterais titulo">
+    <div class="titulo-do-header titulo">
       Casos de COVID-19 ao redor do mundo
     </div>
     <img src="../assets/logo.svg" alt="Logo do COVID-19" class="icone-medio" />
   </div>
   <div class="itens-na-direita">
-    <a href="https://github.com/viniciusCamposs/covid-cases" target="_blank" rel="noopener noreferrer">
-      <img src="../assets/github.svg" alt="Logo" class="icone-pequeno" />
+    <a
+      href="https://github.com/viniciusCamposs/covid-cases"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src="../assets/github.svg" alt="Logo" class="icone-pequeno margin-nas-laterais-responsiva" />
     </a>
   </div>
 </header>
 
 <main class="margin-nas-laterais">
-  <p class="margin-nas-laterais titulo-do-main titulo">Dados</p>
+  <p class="titulo-do-main titulo">Dados</p>
 
   <div class="d-flex">
     <app-tabela-de-casos-nos-estados-brasileiros
       class="width-50-porcento"
     ></app-tabela-de-casos-nos-estados-brasileiros>
 
-    <div class="d-block" class="width-50-porcento">
+    <div class="d-block" class="width-50-porcento margin-nas-laterais-responsiva">
       <div class="d-flex">
-        <app-tabela-de-casos class="width-50-porcento" [pais]="pais[0]"></app-tabela-de-casos>
-        <app-tabela-de-casos class="width-50-porcento" [pais]="pais[1]"></app-tabela-de-casos>
+        <app-tabela-de-casos
+          class="width-50-porcento"
+          [pais]="pais[0]"
+        ></app-tabela-de-casos>
+        <app-tabela-de-casos
+          class="width-50-porcento"
+          [pais]="pais[1]"
+        ></app-tabela-de-casos>
       </div>
 
       <div class="d-flex">
-        <app-tabela-de-casos class="width-50-porcento" [pais]="pais[2]"></app-tabela-de-casos>
-        <app-tabela-de-casos class="width-50-porcento" [pais]="pais[3]"></app-tabela-de-casos>
+        <app-tabela-de-casos
+          class="width-50-porcento"
+          [pais]="pais[2]"
+        ></app-tabela-de-casos>
+        <app-tabela-de-casos
+          class="width-50-porcento"
+          [pais]="pais[3]"
+        ></app-tabela-de-casos>
       </div>
     </div>
   </div>
 
   <div class="d-flex">
-    <div class="d-block width-50-porcento margin-nas-laterais">
+    <div class="d-block width-50-porcento">
       <div class="d-flex h-center">
-        <div class="d-block" style="width: 23.4375vw">
+        <div class="d-block">
           <p class="titulo titulo-do-main text-center">
             Pesquise por um estado
           </p>
@@ -60,9 +76,9 @@
         </div>
       </div>
     </div>
-    <div class="d-block width-50-porcento margin-nas-laterais">
+    <div class="d-block width-50-porcento">
       <div class="d-flex h-center">
-        <div class="d-block" style="width: 23.4375vw">
+        <div class="d-block">
           <p class="titulo titulo-do-main text-center">Pesquise por um país</p>
           <nz-select
             nzShowSearch

@@ -14,7 +14,6 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TabelaDeCasosNosEstadosBrasileirosComponent } from './tabelas-de-casos/tabela-de-casos-nos-estados-brasileiros/tabela-de-casos-nos-estados-brasileiros.component';
-import { TabelaComPesquisaDeCasosPorPaisComponent } from './tabelas-de-casos/tabela-com-pesquisa-de-casos-por-pais/tabela-com-pesquisa-de-casos-por-pais.component';
 import { TabelaDeCasosComponent } from './tabelas-de-casos/tabela-de-casos/tabela-de-casos.component';
 
 registerLocaleData(en);
@@ -23,7 +22,6 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     TabelaDeCasosNosEstadosBrasileirosComponent,
-    TabelaComPesquisaDeCasosPorPaisComponent,
     TabelaDeCasosComponent,
   ],
   imports: [

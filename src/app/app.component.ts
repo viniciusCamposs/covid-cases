@@ -74,8 +74,12 @@ export class AppComponent implements OnInit {
   getPais(pais: any): any {
     // tslint:disable-next-line: deprecation
     this.casosService.getDadosPorPaisSelecionado(pais).subscribe(
-      (data: any) => { this.pais.push(data.data); },
-      (error: any) => { console.error(error); }
+      (data: any) => {
+        this.pais.push(data.data);
+      },
+      (error: any) => {
+        console.error(error);
+      }
     );
   }
 }
